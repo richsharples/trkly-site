@@ -155,15 +155,12 @@
 <div class="beta-panel">
 <div>
 <h2>Planning a group trip?</h2>
-<p>Trkly is in private beta. Leave your email and we'll send an invite.</p>
+<p>Trkly is in private beta. Request an invite and we'll be in touch.</p>
 </div>
-<!-- Set data-endpoint to your form service URL (e.g. a Formspree form). Until then the form explains that sign-up isn't open. -->
-<form class="beta-form" id="beta-form" data-endpoint="">
-<label class="sr-only" for="beta-email">Email address</label>
-<input id="beta-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
-<button class="btn btn-primary" type="submit">Request invite</button>
-<p class="form-note" id="form-note" role="status" aria-live="polite"></p>
-</form>
+<div class="beta-cta">
+<a class="btn btn-primary" href="https://docs.google.com/forms/d/11u9iHJRAySjuGP0D07eRujeCHlhYibDsX2r_ebiXkZc/viewform" target="_blank" rel="noopener">Request an invite</a>
+<p class="form-note">Opens a short Google Form in a new tab.</p>
+</div>
 </div>
 </section>
 </main>
@@ -175,19 +172,5 @@
 </footer>
 </div>
 
-<script>
-(function () {
-  var form = document.getElementById('beta-form'), note = document.getElementById('form-note');
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var url = form.getAttribute('data-endpoint');
-    if (!url) { note.textContent = 'Invites open soon. Thanks for your interest.'; return; }
-    note.textContent = 'Sending…';
-    fetch(url, { method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(form) })
-      .then(function (r) { note.textContent = r.ok ? "Thanks, we'll be in touch." : 'Something went wrong. Please try again.'; if (r.ok) form.reset(); })
-      .catch(function () { note.textContent = 'Something went wrong. Please try again.'; });
-  });
-})();
-</script>
 </body>
 </html>

@@ -18,4 +18,4 @@ Landing page for [trkly.app](https://trkly.app), served by GitHub Pages. Static 
 The app itself lives at `app.trkly.app` (Cloudflare Pages), so add that CNAME separately.
 
 ## Beta sign-up
-The form posts to the URL in `data-endpoint` on `#beta-form`. Leave it empty and the form just says invites open soon. To collect emails, create a form (e.g. Formspree) and paste its endpoint there.
+"Request an invite" opens the Google Form (owned by rich.sharples@softwhere.org); responses go to its linked Sheet. The form must allow responses from outside softwhere.org.
