@@ -1,0 +1,28 @@
+name: Deploy to Cloudflare Pages
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: site-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Collect site files
+        run: |
+          mkdir dist
+          cp -r index.html favicon.svg assets _headers dist/
+      - name: Create Pages project if missing
+        run: npx --yes wrangler@4 pages project create trkly-site --production-branch=main || true
+      - name: Deploy
+        run: npx --yes wrangler@4 pages deploy dist --project-name=trkly-site --branch="${{ github.head_ref || github.ref_name }}" --commit-dirty=true

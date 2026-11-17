@@ -1,6 +1,6 @@
 # trkly-site
 
-Landing page for [trkly.app](https://trkly.app), served by GitHub Pages. Static HTML/CSS, no build step. Colours, type and spacing come from the Trkly design system (tokens mirrored in `assets/site.css`).
+Landing page for [trkly.app](https://trkly.app), served by Cloudflare Pages (project `trkly-site`). Static HTML/CSS, no build step. Colours, type and spacing come from the Trkly design system (tokens mirrored in `assets/site.css`).
 
 ## Files
 - `index.html` — the one-page site
@@ -10,12 +10,15 @@ Landing page for [trkly.app](https://trkly.app), served by GitHub Pages. Static 
 - `.nojekyll` — serve files as-is
 
 ## Deploy
-1. Push to `main` of `trkly-site`.
-2. Settings → Pages → Source: *Deploy from a branch*, `main` / root.
-3. DNS for trkly.app (apex): A records to 185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153 (and AAAA 2606:50c0:8000::153 … 8003::153). Optional `www` CNAME → `<user>.github.io`.
-4. Tick **Enforce HTTPS** once the certificate is issued (.app domains only work over HTTPS).
+Push to `main` → GitHub Actions deploys to the Cloudflare Pages project `trkly-site` (pull requests get a preview URL).
 
-The app itself lives at `app.trkly.app` (Cloudflare Pages), so add that CNAME separately.
+One-time setup:
+1. Repo → Settings → Secrets and variables → Actions: secret `CLOUDFLARE_API_TOKEN`, variable `CLOUDFLARE_ACCOUNT_ID` (same values as the `trkly` app repo).
+2. trkly.app's DNS must be a Cloudflare zone (nameservers at GoDaddy pointed to Cloudflare); an apex domain can't be attached to Pages otherwise.
+3. Cloudflare → Workers & Pages → `trkly-site` → Custom domains: add `trkly.app` and `www.trkly.app` (then redirect www → apex with a Redirect Rule or bulk redirect).
+4. Repo → Settings → Pages → turn GitHub Pages off once trkly.app shows the Cloudflare deploy. `CNAME` and `.nojekyll` are GitHub Pages leftovers and can then be deleted.
+
+The app lives separately at `app.trkly.app`; "Sign in" links there.
 
 ## Beta sign-up
 "Request an invite" opens the Google Form (owned by rich.sharples@softwhere.org); responses go to its linked Sheet. The form must allow responses from outside softwhere.org.
