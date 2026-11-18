@@ -23,6 +23,12 @@ The app lives separately at `app.trkly.app`; "Sign in" links there.
 ## Beta sign-up
 "Request an invite" opens the Google Form (owned by rich.sharples@softwhere.org); responses go to its linked Sheet. The form must allow responses from outside softwhere.org.
 
+## Changing the styles
+
+Browsers keep `assets/site.css` for a week. After editing it, change the `?v=` number on the stylesheet link in every page (`index.html`, `changelog/`, `privacy/`), so visitors get the new styles straight away. Any new value works; the first 8 characters of `sha1sum assets/site.css` is the convention.
+
+New top-level folders must also be added to the copy step in `.github/workflows/deploy.yml`, or they won't be deployed.
+
 ## Changelog
 
 `changelog/index.html` (served at trkly.app/changelog/). Newest entry at the top. Add an entry whenever a
