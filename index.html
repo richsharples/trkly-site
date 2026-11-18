@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Trkly — split the trip, not the family</title>
-<meta name="description" content="Group travel expenses in any currency. Log shared costs in seconds, see balances in your own money, and settle up with the fewest payments.">
+<meta name="description" content="Group travel expenses in any currency. Snap a receipt and Trkly fills in the expense. See balances in your own money and settle up with the fewest payments.">
 <meta name="theme-color" content="#13212B">
 <meta property="og:title" content="Trkly — split the trip, not the family">
-<meta property="og:description" content="Group travel expenses in any currency. Log in seconds, settle up once.">
+<meta property="og:description" content="Snap the receipt, see what you owe in your own currency, settle up once.">
 <meta property="og:url" content="https://trkly.app/">
 <meta property="og:type" content="website">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -26,7 +26,8 @@
 </a>
 <nav class="nav" aria-label="Main">
 <a href="#how">How it works</a>
-<a href="#currencies">Currencies</a>
+<a href="#receipts">Receipts</a>
+<a href="#features">Features</a>
 <a href="/changelog/">Changelog</a>
 <a class="btn btn-dark" href="#beta">Join the beta</a>
 </nav>
@@ -56,68 +57,118 @@
 <div class="hero-copy">
 <p class="eyebrow">Group travel expenses</p>
 <h1>Split the trip,<br>not the family.</h1>
-<p class="lede">Log every coffee and dinner in seconds, in any currency. Trkly shows each person what they owe in their own money, and works out the fewest payments to settle up.</p>
+<p class="lede">Snap the receipt and Trkly fills in the rest. Everyone sees what they owe in their own currency, and at the end you settle up with the fewest payments.</p>
 <div class="cta-row">
 <a class="btn btn-primary" href="#beta">Join the beta</a>
-<a class="btn btn-link" href="#how">See how it works</a>
+<a class="btn btn-link" href="#receipts">See receipt scanning</a>
 </div>
-<p class="small">Works in your browser on phone, tablet and laptop. No app store, no passwords.</p>
+<p class="small">Works in your browser on phone, tablet and laptop. Nothing to install.</p>
 </div>
 
-<div class="phones" aria-label="Trkly app screens" role="img">
+<div class="phones" aria-label="Trkly app screens: a scanned receipt filling in an expense, and the trip balance" role="img">
 <div class="phone" aria-hidden="true">
 <div class="phone-body">
-<div class="p-row"><div><div class="p-meta">15 Dec – 4 Jan</div><div class="p-title">Australia</div></div><div class="avatar">RS</div></div>
-<div class="balance-card"><div class="lbl">You are owed</div><div class="amt">US$42</div><div class="lbl">≈ A$61 · updated just now</div></div>
-<div class="p-label">Balances</div>
-<div class="p-list">
-<div class="p-row"><span>The Hartleys <span class="muted">· 4</span></span><span class="owed">owes US$24</span></div>
-<div class="p-row"><span>Priya</span><span class="owed">owes US$18</span></div>
-<div class="p-row"><span>The Moreaus <span class="muted">· 3</span></span><span class="muted">settled</span></div>
-<div class="p-row"><span>Tom</span><span class="muted">settled</span></div>
+<div class="p-row"><span class="p-meta">‹ Australia</span><span class="p-title-s">Add expense</span></div>
+<div class="r-attached"><div class="r-thumb"><i></i><i></i><i class="s"></i><i></i><i class="t"></i></div><div><div class="r-title">Receipt attached</div><div class="p-meta">Read just now</div></div></div>
+<div class="ai-note">Check the highlighted details, then save.</div>
+<div class="big-amt ai"><div class="v">A$47.50</div><div class="s">AUD · ≈ US$31</div></div>
+<div class="field ai"><span>What</span><span>Bills Surry Hills</span></div>
+<div class="field ai"><span>Date</span><span>Sun 20 Dec</span></div>
+<div class="chips"><span class="on ai-chip">Food</span><span>Coffee</span><span>Groceries</span></div>
+<div class="field"><span>Paid by</span><span>Me</span></div>
+<div class="field"><span>Split</span><span>Everyone · 6 people</span></div>
 </div>
-<div class="p-label">Recent</div>
-<div class="p-recent">
-<div class="p-row"><span>Flat whites ×6<br><span class="muted p-meta">Priya paid · everyone</span></span><span class="v">A$33.00</span></div>
-<div class="p-row"><span>Fish &amp; chips, Bondi<br><span class="muted p-meta">You paid · by household</span></span><span class="v">A$148.40</span></div>
-</div>
-</div>
-<div class="phone-foot"><div class="p-btn">+ Add expense</div></div>
+<div class="phone-foot"><div class="p-btn">Save</div></div>
 </div>
 
 <div class="phone offset hide-sm" aria-hidden="true">
 <div class="phone-body">
-<div class="p-title-s">Quick add</div>
-<div class="big-amt"><div class="v">A$18.50</div><div class="s">≈ US$12.70 · rate locked today</div></div>
-<div class="field"><span>What</span><span>Flat whites ×4</span></div>
-<div class="field"><span>Paid by</span><span>Me</span></div>
-<div class="chips"><span class="on">4 people</span><span>Everyone</span><span>By household</span></div>
-<div class="keypad"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>.</span><span>0</span><span>⌫</span></div>
+<div class="p-row"><div><div class="p-meta">15 Dec – 4 Jan</div><div class="p-title">Australia</div></div><div class="avatar">RS</div></div>
+<div class="balance-card"><div class="lbl">You are owed</div><div class="amt">US$42</div><div class="lbl">≈ A$61 · today’s rate</div></div>
+<div class="p-label">Your usuals</div>
+<div class="chips"><span>Bills Café · A$23.50</span><span>Coles · A$86</span></div>
+<div class="p-label">Today</div>
+<div class="p-recent">
+<div class="p-row"><span>Bills Surry Hills <span class="tag-s">Receipt</span><br><span class="muted p-meta">You paid · everyone</span></span><span class="v">A$47.50</span></div>
+<div class="p-row"><span>Flat whites ×6<br><span class="muted p-meta">Priya paid · everyone</span></span><span class="v">A$33.00</span></div>
+<div class="p-row"><span>Ferry to Manly<br><span class="muted p-meta">Tom paid · by household</span></span><span class="v">A$42.00</span></div>
 </div>
-<div class="phone-foot"><div class="p-btn">Save</div></div>
+</div>
+<div class="phone-foot"><div class="p-btn">+ Add expense</div></div>
 </div>
 </div>
 </div>
 </section>
 
+<section id="receipts" class="wrap spotlight">
+<div class="spot-copy">
+<p class="eyebrow">New · Receipt scanning</p>
+<h2>Snap the receipt.<br>That’s the expense.</h2>
+<p>Take a photo and Trkly reads the place, the total, the currency and the date, and picks a category. What it read is highlighted so you can check it at a glance. Nothing is saved until you tap Save.</p>
+<ul class="ticks">
+<li>Picks the amount you actually paid, tips and service charge included, not the subtotal</li>
+<li>Reads receipts from anywhere, in any currency</li>
+<li>The photo stays with the expense, so anyone on the trip can check a number</li>
+</ul>
+</div>
+<div class="spot-art" aria-label="A paper receipt and the expense form it fills in" role="img">
+<div class="receipt" aria-hidden="true">
+<div class="rc-head">BILLS SURRY HILLS</div>
+<div class="rc-sub">359 Crown St · Surry Hills NSW</div>
+<div class="rc-sub">20/12/2026 · 12:41</div>
+<div class="rc-rule"></div>
+<div class="rc-line"><span>2 × Ricotta hotcakes</span><span>52.00</span></div>
+<div class="rc-line"><span>3 × Flat white</span><span>15.00</span></div>
+<div class="rc-line"><span>1 × Orange juice</span><span>8.50</span></div>
+<div class="rc-rule"></div>
+<div class="rc-line"><span>Subtotal</span><span>75.50</span></div>
+<div class="rc-line"><span>Sunday surcharge 10%</span><span>7.55</span></div>
+<div class="rc-line rc-total"><span>TOTAL AUD</span><span>83.05</span></div>
+<div class="rc-sub">Incl. GST 7.55</div>
+<div class="rc-tear"></div>
+</div>
+<div class="arrow" aria-hidden="true"><svg width="56" height="24" viewBox="0 0 56 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h50" stroke-dasharray="0.1 7"/><path d="M44 5l8 7-8 7"/></svg></div>
+<div class="mini-form" aria-hidden="true">
+<div class="mf-row ai"><span>Amount</span><b>A$83.05</b></div>
+<div class="mf-row ai"><span>What</span><b>Bills Surry Hills</b></div>
+<div class="mf-row ai"><span>Date</span><b>Sun 20 Dec</b></div>
+<div class="mf-row ai"><span>Category</span><b>Food</b></div>
+<div class="mf-row"><span>Split</span><b>Everyone</b></div>
+<div class="mf-save">Save</div>
+</div>
+</div>
+</section>
+
 <section id="how" class="wrap section">
-<h2>Three taps, then back to the beach.</h2>
+<h2>Three steps, then back to the beach.</h2>
 <div class="cards">
 <div class="card">
 <div class="card-top"><span class="step">01</span><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg></div>
 <h3>Share one link</h3>
-<p>Everyone joins from the family chat with their email. Pick your household and home currency, and you're in.</p>
+<p>Send the invite to the family chat, or show a QR code when you’re together. Everyone picks their household and home currency, and they’re in.</p>
 </div>
 <div class="card">
-<div class="card-top"><span class="step">02</span><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6M9 16h3"/></svg></div>
+<div class="card-top"><span class="step">02</span><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></div>
 <h3>Log it as you go</h3>
-<p>Type the amount or snap the receipt. Trkly reads the total and remembers who you usually split with. Works offline.</p>
+<p>Snap the receipt, tap one of your usuals, or type the amount. Split with everyone, by household, by shares or exact amounts.</p>
 </div>
 <div class="card">
 <div class="card-top"><span class="step">03</span><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V4"/><path d="M5 4h11l-2 4 2 4H5"/></svg></div>
 <h3>Settle up once</h3>
-<p>At the end, Trkly shows the fewest payments, each in the payer's own currency, with the payee's Venmo, bank or Wise details.</p>
+<p>At the end, Trkly shows the fewest payments, each in the payer’s own currency, with the payee’s Venmo, bank or Wise details.</p>
 </div>
+</div>
+</section>
+
+<section id="features" class="wrap section">
+<h2>Small things that stop the arguments.</h2>
+<div class="feature-grid">
+<div class="feature-card"><span class="f-icon"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z"/></svg></span><h3>Your usuals</h3><p>The morning café, the corner shop. Your regular spots appear as one-tap shortcuts with the usual amount and split, and they follow the time of day.</p></div>
+<div class="feature-card"><span class="f-icon"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></span><h3>Households</h3><p>Split by family, and settle one payment per household instead of a dozen.</p></div>
+<div class="feature-card"><span class="f-icon"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></span><h3>Who changed what</h3><p>Every add, edit and delete is in the activity feed, and each expense shows its own history. No “who changed the dinner bill?”</p></div>
+<div class="feature-card"><span class="f-icon"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4z"/><path d="M14 14h2v2h-2zM18 14h2M14 18h2M18 18h2v2"/></svg></span><h3>Join with a QR code</h3><p>Together at the airport? The organiser shows a code, everyone scans it, and the group is set up in a minute.</p></div>
+<div class="feature-card"><span class="f-icon"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h10l4 4v14H5z"/><path d="M8 11h8M8 15h8M12 11v8"/></svg></span><h3>Take the numbers with you</h3><p>Download every expense as a spreadsheet for Excel, Numbers or Google Sheets, with each person’s share and totals.</p></div>
+<div class="feature-card"><span class="f-icon"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="13" height="10" rx="1.5"/><rect x="16.5" y="8" width="5" height="11" rx="1.2"/><path d="M6 19h6"/></svg></span><h3>Phone, iPad or laptop</h3><p>Log on your phone at the table, review on the iPad back at the apartment. Same trip, everywhere.</p></div>
 </div>
 </section>
 
@@ -126,7 +177,7 @@
 <div class="wrap dark-inner">
 <div class="dark-copy">
 <h2>Everyone sees their own money.</h2>
-<p>Spend in the local currency, think in your own. Each expense locks the day's rate, and you can enter what your card actually charged.</p>
+<p>Spend in the local currency, think in your own. Each expense locks the day’s exchange rate, and you can change the rate if your card charged differently. When the organiser closes the trip, rates are fixed so everyone sees the same numbers.</p>
 <ul class="ccys" aria-label="Example supported currencies">
 <li>US$ USD</li><li>€ EUR</li><li>£ GBP</li><li>A$ AUD</li>
 <li style="opacity:.85">¥ JPY</li><li style="opacity:.75">C$ CAD</li><li style="opacity:.65">NZ$ NZD</li><li style="opacity:.55">CHF</li>
@@ -137,26 +188,25 @@
 <div class="phone-body" style="gap:12px">
 <div class="p-title-s">Settle up</div>
 <div class="p-meta" style="font-size:12px">3 payments clear the whole trip</div>
-<div class="settle"><div class="who">The Hartleys → You</div><div class="amt">£19.10</div><div class="how">You take Wise or Venmo</div><div class="pill-s">Mark paid</div></div>
-<div class="settle"><div class="who">Priya → You</div><div class="amt">US$18.00</div><div class="how">You take Venmo</div><div class="pill-s">Mark paid</div></div>
-<div class="settle"><div class="who">The Moreaus → Tom</div><div class="amt">€8.20</div><div class="how">Tom takes UK bank transfer</div><div class="pill-s paid">Paid ✓</div></div>
+<div class="settle"><div class="who">The Hartleys → You</div><div class="amt">£19.10</div><div class="how">You take Wise or Venmo</div><div class="pill-s">Mark received</div></div>
+<div class="settle"><div class="who">Priya → You</div><div class="amt">US$18.00</div><div class="how">You take Venmo</div><div class="pill-s">Mark received</div></div>
+<div class="settle"><div class="who">The Moreaus → Tom</div><div class="amt">€8.20</div><div class="how">Tom takes UK bank transfer</div><div class="pill-s paid">Paid ✓ confirmed</div></div>
 </div>
 </div>
 </div>
 </section>
 
-<section class="wrap features">
-<div class="feature"><h3>Households</h3><p>Split by family, and settle one payment per household instead of a dozen.</p></div>
-<div class="feature"><h3>Offline first</h3><p>No signal in the outback? Keep logging. It syncs when you're back online.</p></div>
-<div class="feature"><h3>Receipt reading</h3><p>Snap a receipt and Trkly fills in the merchant, total and date for you to confirm.</p></div>
-<div class="feature"><h3>No money moves</h3><p>Trkly keeps the score. You pay each other however you already do.</p></div>
+<section class="wrap trust">
+<div class="trust-item"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.2-7.5 9.5-4.3-1.3-7.5-4.9-7.5-9.5V6z"/><path d="M9 12l2.2 2.2L15.5 10"/></svg><div><b>Private by design.</b> Trips are invite-only, and receipts and expenses are only visible to people on the trip.</div></div>
+<div class="trust-item"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="9" cy="7" rx="5.5" ry="2.5"/><path d="M3.5 7v4c0 1.4 2.5 2.5 5.5 2.5"/><path d="M3.5 11v4c0 1.4 2.5 2.5 5.5 2.5"/><ellipse cx="15.5" cy="14" rx="5" ry="2.3"/><path d="M10.5 14v3.5c0 1.3 2.2 2.3 5 2.3s5-1 5-2.3V14"/></svg><div><b>No money moves.</b> Trkly keeps the score. You pay each other however you already do.</div></div>
+<div class="trust-item"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg><div><b>Improving every week.</b> See what’s new in the <a href="/changelog/">changelog</a>.</div></div>
 </section>
 
 <section id="beta" class="wrap beta">
 <div class="beta-panel">
 <div>
 <h2>Planning a group trip?</h2>
-<p>Trkly is in private beta. Request an invite and we'll be in touch.</p>
+<p>Trkly is in private beta with a small group of families and friends. Request an invite and we’ll be in touch.</p>
 </div>
 <div class="beta-cta">
 <a class="btn btn-primary" href="https://docs.google.com/forms/d/11u9iHJRAySjuGP0D07eRujeCHlhYibDsX2r_ebiXkZc/viewform" target="_blank" rel="noopener">Request an invite</a>
