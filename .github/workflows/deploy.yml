@@ -21,7 +21,7 @@ jobs:
       - name: Collect site files
         run: |
           mkdir dist
-          cp -r index.html favicon.svg assets _headers dist/
+          cp -r index.html favicon.svg assets changelog _headers dist/
       - name: Create Pages project if missing
         run: npx --yes wrangler@4 pages project create trkly-site --production-branch=main || true
       - name: Deploy
