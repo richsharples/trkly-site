@@ -22,3 +22,9 @@ The app lives separately at `app.trkly.app`; "Sign in" links there.
 
 ## Beta sign-up
 "Request an invite" opens the Google Form (owned by rich.sharples@softwhere.org); responses go to its linked Sheet. The form must allow responses from outside softwhere.org.
+
+## Changelog
+
+`changelog/index.html` (served at trkly.app/changelog/). Newest entry at the top. Add an entry whenever a
+user-facing change ships: date, a short headline, one plain-English sentence, then bullets about what people
+will notice (not how it was built).

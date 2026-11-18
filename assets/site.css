@@ -134,3 +134,23 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0; }
   .beta-panel { padding: 36px 24px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* changelog */
+.cl { max-width: 880px; margin: 0 auto; padding-block: var(--space-10) var(--space-20); }
+.cl-head { margin-bottom: var(--space-14); }
+.cl-head h1 { font-size: clamp(36px, 5vw, 52px); font-weight: 800; letter-spacing: -1px; }
+.cl-head p { color: var(--ink-subtle); font-size: 18px; margin: var(--space-3) 0 0; }
+.cl-entry { display: grid; grid-template-columns: 160px 1fr; gap: var(--space-8); padding-block: var(--space-10); border-top: 1px solid var(--line); }
+.cl-date { color: var(--ink-subtle); font-size: 14px; font-weight: 500; padding-top: 8px; }
+.cl-date time { position: sticky; top: var(--space-6); }
+.cl-body h2 { font-size: 28px; font-weight: 800; letter-spacing: -0.4px; }
+.cl-body h2 a { color: var(--ink); text-decoration: none; }
+.cl-body h2 a:hover { color: var(--teal); }
+.cl-lead { font-size: 18px; color: var(--ink-muted); line-height: 1.55; margin: var(--space-3) 0 var(--space-5); }
+.cl-body ul { margin: 0; padding-left: 20px; display: grid; gap: var(--space-3); color: var(--ink-muted); line-height: 1.6; }
+.cl-body b { color: var(--ink); font-weight: 600; }
+.nav a[aria-current="page"] { color: var(--ink); font-weight: 600; }
+@media (max-width: 700px) {
+  .cl-entry { grid-template-columns: 1fr; gap: var(--space-2); padding-block: var(--space-8); }
+  .cl-date { padding-top: 0; }
+}
