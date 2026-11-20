@@ -208,3 +208,9 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0; }
   .arrow { transform: rotate(90deg); }
   .receipt { transform: rotate(-2deg); }
 }
+
+/* Offline spotlight (Nov 2026) */
+.spot-reverse { flex-direction: row-reverse; }
+.p-offline { background: var(--deep); color: #fff; font-size: 10px; line-height: 1.35; padding: 7px 14px; text-align: center; }
+.tag-s.tag-wait { background: #FFF1D6; color: #7A4B00; }
+@media (max-width: 640px) { .spot-reverse { flex-direction: column; } }
