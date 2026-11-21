@@ -44,6 +44,7 @@
 <li><b>Your trip is shared only with the people on it.</b></li>
 <li><b>We don’t browse your trips.</b> We only look at trip details when you ask us for help, or when we have to in order to fix a problem or keep Trkly secure.</li>
 <li><b>We measure how the app is used</b> (see Product analytics and diagnostics below) so we can fix errors and improve it.</li>
+<li><b>You can delete a trip or your account yourself</b>, in the app.</li>
 </ul>
 </div>
 </article>
@@ -55,7 +56,7 @@
 <li><b>Your account.</b> Your email address, the sign-in method you use (an email link, Apple or Google), and whether you’ve turned on two-step sign-in. We never see your authenticator codes.</li>
 <li><b>Your profile.</b> Your display name, home currency, and the payment details you choose to add (for example a Venmo username), so others know how to pay you.</li>
 <li><b>Your trips.</b> Trip names and dates, who is on the trip and in which household, expenses (amount, currency, date, place, category, notes, how they’re split), payments marked as made, and a history of changes.</li>
-<li><b>Receipt photos.</b> These are stored only if you take or add one.</li>
+<li><b>Receipt photos.</b> These are stored only if you take or add one. Location data in the photo is removed on your device before it’s uploaded.</li>
 </ul>
 </div>
 </article>
@@ -63,13 +64,21 @@
 <div class="cl-date">Analytics</div>
 <div class="cl-body">
 <h2>Product analytics and diagnostics</h2>
-<p class="cl-lead">We collect product usage and diagnostic data to keep the app reliable, fix errors and improve features. This includes which features are used, which screens people visit, error messages shown in the app, performance information, and device, browser and operating system details.</p>
+<p class="cl-lead">We collect product usage and diagnostic data to keep the app reliable, fix errors and improve features. This includes which features are used, which screens people visit, error messages shown in the app, performance information, and device, browser and operating system details. We also count activity that Trkly already records for your trip, such as expenses added and receipts scanned, to see whether features work.</p>
 <ul>
-<li>This data is linked to a random account ID, never to your email address or name. Some of it we only look at in aggregate, across everyone.</li>
-<li><b>Screen recordings.</b> Where they’re turned on, we may record how the app’s screens are used, to understand where people get stuck. Anything you type is hidden in these recordings, and receipt photos are never included.</li>
+<li>This data is linked to random IDs for your account and your trip, never to your email address or name. Some of it we only look at in aggregate, across everyone.</li>
+<li>Our analytics provider receives your IP address when the app sends data, and may use it to estimate a rough location such as your country or city.</li>
+<li><b>Screen recordings.</b> Where they’re turned on, we may record how the app’s screens are used, to understand where people get stuck. Anything you type and the text shown on screen, such as names, amounts and email addresses, are hidden in these recordings, and receipt photos are never included.</li>
 <li>Before anything is sent, we remove the parts of web addresses that identify a particular trip, invite link or sign-in link.</li>
-<li>Service providers process this data on our behalf. We keep it only as long as we need it for these purposes.</li>
+<li>Service providers process this data on our behalf. We keep it only as long as we need it for these purposes. Deleting your account in the app doesn’t remove this data, so email us if you’d like it deleted too.</li>
 </ul>
+</div>
+</article>
+<article class="cl-entry" id="device">
+<div class="cl-date">On your device</div>
+<div class="cl-body">
+<h2>What Trkly keeps on your device</h2>
+<p class="cl-lead">Trkly doesn’t use advertising or tracking cookies. The app keeps a few things in your browser’s storage so it works: your sign-in, so you stay signed in, a copy of your trips and any expenses waiting to send, so Trkly works without signal, and a random analytics ID. Signing out ends your sign-in and resets the analytics ID.</p>
 </div>
 </article>
 <article class="cl-entry" id="see">
@@ -95,7 +104,9 @@
 <li><b>PostHog</b> handles product analytics and diagnostics.</li>
 <li><b>Apple and Google</b> sign you in, if you choose Continue with Apple or Google.</li>
 <li><b>Google Forms</b> collects beta sign-up requests and tester feedback.</li>
+<li><b>Frankfurter</b> provides exchange rates. The app asks it for rates directly, so it sees your IP address, but no account or trip details.</li>
 </ul>
+<p>Your account and trip data, including receipt photos, are stored with Supabase in Canada. Analytics data is stored with PostHog in the United States.</p>
 </div>
 </article>
 <article class="cl-entry" id="choices">
@@ -104,8 +115,9 @@
 <h2>Keeping and deleting your information</h2>
 <ul>
 <li>Trip information is kept for as long as the trip exists, so everyone can see it and settle up. A copy is also kept on your phone so Trkly works without signal. A deleted expense no longer counts, but the trip’s history still shows that it was deleted.</li>
-<li><b>Delete it yourself, any time.</b> Organisers can delete a trip for everyone from the Organiser tab. You can delete your account from the Account screen. Expenses you added to a shared trip stay with the trip as “Former member”, without your name or payment details, so the totals still add up for everyone else.</li>
-<li>To get a copy of your information or correct it, email us at the address below.</li>
+<li><b>Deleting a trip.</b> The trip’s organiser can delete it from the Organiser tab. This removes the trip for everyone: its expenses, splits, payments, activity history, members, invite list and receipt photos.</li>
+<li><b>Deleting your account.</b> Go to Account, then Delete my account. This removes your sign-in, your saved profile and any invite-list entries for your email. In trips you belong to, your name and payment details are removed and you show as “Former member”. The expenses, payments and receipt photos you added stay with those trips, so everyone’s balances still add up. If you organise a trip, delete it first.</li>
+<li>For anything the app can’t do, like getting a copy of your information, correcting it, or deleting analytics data or a beta sign-up, email us at the address below. We’ll do it and confirm.</li>
 <li>Trkly is for people aged 13 and over.</li>
 </ul>
 </div>
